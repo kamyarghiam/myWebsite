@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<center>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<title>Kamyar Ghiam</title>
+		<script src = "jQuery.js">
+		</script>
+	</head>
+
+	<body bgcolor="#222227">
+	
+	<section class = "background" id = "gradient">
+	<body bgcolor="#222227">
+
+		<div style="width: 640px; color: white">
+		<h1 align= "center" style = "font-size:30px">Kamyar Ghiam</h1>
+		<hr style = "border:1px solid white">
+
+
+		<table stlye = "border:2px solid red">
+		<tr>
+			<th><a href = "index.html"><button class="button"><span>Home </span></button> </th>
+			<th><a href = "resume.html"> <button class="button"><span>Resume </span></button> </th>
+			<th><a href = "projects.html"><button class="button"><span>Projects </span></button> </th>
+			<th> <a href = "calendar.html"> <button class="button"><span>Calendar </span></button> </th>
+			
+		</tr>
+		</table>
+		<strong><div style = "font-size: 30px">
+		Clicks on photo:
+		<span id = "visited"> 0
+		</div></strong>
+		<img class = "circular--square" src= "photos/photo.png" alt="Photo of Kamyar" width = "300" height = "300" id = "myPhoto" style = "opacity: 1"> <br></br>
+	
+  </span>
+		<p> <strong> Mailing Address</strong> </br>
+			<span>
+			Kamyar Ghiam </br>
+			5032 Forbes Avenue, SMC 2857 </br>
+			Pittsburgh, PA 15289 </br>
+			</span>
+		</p>	
+
+		<p> <strong>Links</strong> </br>
+			<span>
+		LinkdIn: <a style="color:yellow"; href = https://www.linkedin.com/in/kamyarghiam/>https://www.linkedin.com/in/kamyarghiam</a> </br>
+		</span>
+		<span>
+		GitHub: <a style="color:yellow"; href = https://github.com/kamyarghiam/>https://github.com/kamyarghiam</a> </br>
+
+		</p>
+		</span>
+		
+		<p> <strong>Emails</strong> </br>
+			<span>
+			kamyarghiam@gmail.com </br>
+		</span>
+		<span>
+			kghiam@andrew.cmu.edu </br>
+			</span>
+		</p>
+
+		<p> <strong>About Me</strong> </br>
+		<span>
+		Hello! My name is Kamyar and I'm from New York. </br>
+		I'm currently an undergraduate at Carnegie Mellon University. </br>
+		My interests include data analytics, business optimization </br> strategies, backend  development, writing, and teaching. </p>
+		</span>
+
+		<p> <strong>About this Site</strong> </br>
+			<span>
+		This is a site I created to store information about </br>
+	myself, my background, my projects, and how to contact me </br>
+		</span>
+
+		 </p>
+
+		</div>
+	
+	<script>
+		function lowOpacity (){
+			var photoF = document.getElementById('myPhoto');
+			photoF.style.opacity = .7;
+		}
+		function highOpacity (){
+			var photoF = document.getElementById('myPhoto');
+			photoF.style.opacity = 1;
+		}
+		var visits = 0;
+		function clickTimes (){
+			visits +=1;
+			var printout = document.getElementById("visited");
+			printout.innerHTML = visits;
+		}
+		var field = document.getElementById('myPhoto');
+		field.addEventListener('mouseover', lowOpacity);
+		field.addEventListener('mouseout', highOpacity);
+		field.addEventListener('click', clickTimes);
+		function makeBold (){
+			$(this).css("font-weight", "bold");
+		}
+		function recover (){
+			$(this).css("font-weight", "normal");
+		}
+		$("span").hover(makeBold, recover)
+
+		
+
+	</script>
+	</body>
+</section>
+</center>
+<footer>
+	<center>
+	<ul style="display:inline">
+          <li>
+            <a href = "https://github.com/kamyarghiam"> <img src= "photos/icons/github.png" alt="Github" width = "30" height = "30" hspace="20"></img></a>
+            <a href = "https://www.linkedin.com/in/kamyarghiam"> <img src= "photos/icons/linkedin.png" alt="LinkdIn" width = "30" height = "30" hspace="20"></img></a>
+            <a href = "https://www.facebook.com/kamyar.ghiam"> <img src= "photos/icons/facebook.png" alt="FB" width = "30" height = "30" hspace="20"></img></a>  
+        </ul>
+	<p style = "color:gray"> &copy;  2018 Kamyar Ghiam</p>
+	</center>
+</footer>
+</html>
